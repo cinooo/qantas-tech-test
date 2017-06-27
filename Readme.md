@@ -7,7 +7,7 @@ npm install
 
 Run locally
 ```
-npm app.js
+node app.js
 ```
 
 Test an endpoint with JSON payload
