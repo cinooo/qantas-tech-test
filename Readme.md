@@ -1,5 +1,7 @@
 # qantas tech test
 
+Please see [original spec](fe-developer.pdf)
+
 Install
 ```
 npm install
