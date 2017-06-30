@@ -23,18 +23,17 @@ app.get('/flights', (req, res) => {
     if (flight.airline === 'QF' && (flight.arrival.airport === 'SYD' || flight.departure.airport === 'SYD')) {
       let formattedData = {
         "flight": `${flight.airline}${flight.flightNumber}`,
-        "origin": flight.arrival.airport,
-        "destination": flight.departure.airport,
+        "origin": flight.departure.airport,
+        "destination": flight.arrival.airport,
         "departureTime": flight.departure.scheduled
       }
       acc.push(formattedData);
     }
     return acc;
   }, [])
-
-  console.log(flights)
   res.json({ flights });
-
 })
 
 app.listen(process.env.PORT || 8081);
+
+module.exports = app;
